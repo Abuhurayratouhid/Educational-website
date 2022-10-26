@@ -6,7 +6,7 @@ import './Courses.css'
 
 const Courses = () => {
     const allCourses = useLoaderData();
-    console.log(allCourses)
+    // console.log(allCourses)
     return (
         <div className=' courses-page-container'>
             <div className=''>
@@ -18,9 +18,12 @@ const Courses = () => {
                 }
                
             </div> 
-            <div className=''>
+            <div className='md:grid grid-cols-2'>
                 {
-                    allCourses.map(courses => <CartOfCourses></CartOfCourses>)
+                    allCourses.map(courses => <CartOfCourses
+                    key={courses.id}
+                    courses={courses}
+                    ></CartOfCourses>)
                 }
                  
             </div>

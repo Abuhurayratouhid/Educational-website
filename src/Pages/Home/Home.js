@@ -43,11 +43,7 @@ const Home = () => {
                                     Graphic design
                                     <div className="badge badge-secondary">coming soon</div>
                                 </h2>
-                                <p>If a dog chews shoes whose shoes does he choose?</p>
-                                <div className="card-actions justify-end">
-                                    <div className="badge badge-outline">Fashion</div>
-                                    <div className="badge badge-outline">Products</div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -61,11 +57,8 @@ const Home = () => {
                                     App development
                                     <div className="badge badge-secondary">coming soon</div>
                                 </h2>
-                                <p>If a dog chews shoes whose shoes does he choose?</p>
-                                <div className="card-actions justify-end">
-                                    <div className="badge badge-outline">Fashion</div>
-                                    <div className="badge badge-outline">Products</div>
-                                </div>
+                                
+                                
                             </div>
                         </div>
 
@@ -78,11 +71,7 @@ const Home = () => {
                                     Game development
                                     <div className="badge badge-secondary">coming soon</div>
                                 </h2>
-                                <p>If a dog chews shoes whose shoes does he choose?</p>
-                                <div className="card-actions justify-end">
-                                    <div className="badge badge-outline">Fashion</div>
-                                    <div className="badge badge-outline">Products</div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
