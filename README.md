@@ -1,7 +1,12 @@
 # EduCamb
+### Live site [link](https://educamb-f89f2.web.app/) 
 
 ## Some Features of this site :
-- responsiv for lerger and small diveces
+- Easy To Customize
+- React icons
+- Built With tailwind , daisy UI
+- Responsive
+- Well Documented
 
 ## Getting Started with Create React App
 
