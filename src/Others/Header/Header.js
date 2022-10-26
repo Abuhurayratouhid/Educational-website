@@ -26,8 +26,8 @@ const Header = () => {
                     </div>
 
                     <Link className='ml-1 hidden md:block md:ml-20' to='/'>Home</Link>
-                    <Link className='ml-1 md:ml-4' to='/courses'>Courses </Link>
-                    <Link className='ml-1 md:ml-4' to='/blog'>Blog  </Link>
+                    <Link className='ml-3 md:ml-4' to='/courses'>Courses </Link>
+                    <Link className='ml-3 md:ml-4' to='/blog'>Blog  </Link>
                     <Link className='ml-1 hidden md:block md:ml-4' to='/register'>Register</Link>
                 </div>
                 <div className=''>
