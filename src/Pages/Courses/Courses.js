@@ -1,16 +1,28 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 import CartOfCourses from '../../Others/CartOfCourses';
 import SidebarOfCourses from '../../Others/SidebarOfCourses';
 import './Courses.css'
 
 const Courses = () => {
+    const allCourses = useLoaderData();
+    console.log(allCourses)
     return (
         <div className=' courses-page-container'>
             <div className=''>
-               <SidebarOfCourses></SidebarOfCourses>
+                {
+                    allCourses.map(courses =><SidebarOfCourses
+                    key={courses.id}
+                    courses={courses}
+                    ></SidebarOfCourses> )
+                }
+               
             </div> 
             <div className=''>
-                <CartOfCourses></CartOfCourses> 
+                {
+                    allCourses.map(courses => <CartOfCourses></CartOfCourses>)
+                }
+                 
             </div>
         </div>
     );

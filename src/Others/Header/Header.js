@@ -22,7 +22,7 @@ const Header = () => {
                     </div>
                     <div className='text-white'>
 
-                    <Link className="ml-4 normal-case text-xl"> EduCamb </Link>
+                    <Link to='/' className="ml-4 normal-case text-xl"> EduCamb </Link>
                     </div>
 
                     <Link className='ml-1 hidden md:block md:ml-20' to='/'>Home</Link>
