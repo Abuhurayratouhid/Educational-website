@@ -7,9 +7,10 @@ const Header = () => {
     return (
         <div>
 
-            <div className="navbar bg-base-300 md:flex justify-between">
+            <div className="navbar bg-blue-200  md:flex justify-between">
                 <div>
-                    <div>
+                    <div className='text-white'>
+                        
                         <Link to='/'>
                             <img
                                 src={logo}
@@ -19,7 +20,7 @@ const Header = () => {
                         </Link>
 
                     </div>
-                    <div>
+                    <div className='text-white'>
 
                     <Link className="ml-4 normal-case text-xl"> EduCamb </Link>
                     </div>
