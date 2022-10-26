@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaBeer } from 'react-icons/fa';
+import { } from 'react-icons/fa';
 import logo from '../../Assets/logo (2).png'
 
 const Header = () => {
@@ -10,7 +10,7 @@ const Header = () => {
             <div className="navbar bg-blue-200  md:flex justify-between">
                 <div>
                     <div className='text-white'>
-                        
+
                         <Link to='/'>
                             <img
                                 src={logo}
@@ -22,7 +22,7 @@ const Header = () => {
                     </div>
                     <div className='text-white'>
 
-                    <Link to='/' className="ml-4 normal-case text-xl"> EduCamb </Link>
+                        <Link to='/' className="ml-4 normal-case text-xl"> EduCamb </Link>
                     </div>
 
                     <Link className='ml-1 hidden md:block md:ml-20' to='/'>Home</Link>
@@ -32,7 +32,10 @@ const Header = () => {
                 </div>
                 <div className=''>
 
-                    <Link className='ml-1 md:ml-4 mr-5' to='/login'>Login</Link>
+                    
+                    {/* test */}
+                    
+                    <Link className='ml-1 md:ml-4 pr-5' to='/login'>Login</Link>
                 </div>
             </div>
 

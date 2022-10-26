@@ -30,7 +30,7 @@ const Home = () => {
             <div className='min-h-screen bg-slate-200'>
                 {/* header  */}
                 <div>
-                    <h1 className='text-5xl font-bold pt-20'>Our up coming courses</h1>
+                    <h1 className='text-5xl font-bold pt-20 text-center'>Our up coming courses</h1>
                 </div>
 
                 <div className='md:flex justify-around'>

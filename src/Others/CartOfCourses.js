@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const CartOfCourses = ({courses}) => {
     const {picture, name, id } = courses;
     return (
-        <div className='m-5'>
+        <div className='md:m-5'>
             <Link to={`/details/${id}`}>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
