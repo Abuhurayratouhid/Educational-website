@@ -19,7 +19,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/courses',
-                loader: ()=> fetch('http://localhost:5000/courses'),
+                loader: ()=> fetch('https://educamb-server.vercel.app/courses'),
                 element: <Courses></Courses>
             },
             {
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/details/:id',
-                loader: ({params})=> fetch(`http://localhost:5000/courses/${params.id}`),
+                loader: ({params})=> fetch(`https://educamb-server.vercel.app/courses/${params.id}`),
                 element: <CourseDetails></CourseDetails>
             }
         ]
