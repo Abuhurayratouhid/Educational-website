@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaGithub,FaGoogle } from 'react-icons/fa';
 import { useState } from 'react';
 import { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -6,7 +7,7 @@ import { AuthContext } from '../../Context/AuthProvider';
 
 const Login = () => {
     const [error, setError]= useState('')
-    const {userLogin}= useContext(AuthContext)
+    const {userLogin,GoogleLogin,githubLogin}= useContext(AuthContext)
     const navigate = useNavigate();
     const location = useLocation()
     const from = location.state?.from?.pathname || '/';
@@ -30,6 +31,29 @@ const Login = () => {
             setError(errorMassage)
         })
     }
+
+    // google login 
+    const handleGoogleLogin= ()=>{
+        GoogleLogin()
+        .then(result =>{
+            const user = result.user;
+            navigate(from, { replace: true})
+            console.log(user)
+        })
+        .catch(e => console.log(e))
+    }
+
+    // github login
+    const handleGitHubLogin = ()=>{
+        githubLogin()
+        .then(result => {
+            const user = result.user;
+            navigate(from, { replace: true})
+            console.log(user)
+        })
+        .catch(e => console.log(e))
+    }
+    
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">
@@ -61,6 +85,10 @@ const Login = () => {
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>
+                                <div className='flex justify-around '>
+                                <button onClick={handleGitHubLogin} className="btn text-3xl mt-3 w-[50%]"><FaGithub></FaGithub></button>
+                                <button onClick={handleGoogleLogin} className="btn text-3xl mt-3 w-[50%] ml-2"><FaGoogle></FaGoogle></button>
+                                </div>
                             </div>
                         </form>
                     </div>
