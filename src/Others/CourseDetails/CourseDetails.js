@@ -27,6 +27,12 @@ const CourseDetails = () => {
                 </div>
                 <figure><img className='w-[50%] h-[30%]' src={picture} alt="Shoes" /></figure>
                 <div className='text-center m-5'>
+                
+                <div className='w-[50%] ml-[25%]'>
+                    
+                    <p className='text-2xl'>Why you learn this language:</p>
+                    <p>{details}</p>
+                </div> 
                 <button className="btn  btn-primary ">
                     <Link to={`/checkout/${id}`}>
                     <p className='text-sky-500 text-2xl ml-6'><FaRegGem ></FaRegGem></p>
@@ -34,12 +40,7 @@ const CourseDetails = () => {
                     purchase</Link>
                    
                     </button>
-                </div>
-                <div className='w-[50%] ml-[25%]'>
-                    
-                    <p className='text-2xl'>Why you learn this language:</p>
-                    <p>{details}</p>
-                </div>    
+                </div>   
                     
             </div>
         </div>
