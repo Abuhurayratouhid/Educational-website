@@ -1,7 +1,10 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Context/AuthProvider';
 
 const Register = () => {
+    const {createUser , user, GoogleLogin,updateUserProfile } = useContext(AuthContext)
     const handleFormSubmit = (e)=>{
         e.preventDefault();
         const form = e.target ;
@@ -10,8 +13,32 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(name, photoURL,email,password)
+        createUser(email,password)
+        .then(result =>{
+            const user = result.user;
+            console.log(user)
+            handleUpdateUserProfile(name, photoURL)
+            
+        })
+        .catch(error => console.log(error))
 
 
+    }
+
+    const handleUpdateUserProfile = (name,photoURL) =>{
+        const profile = {
+            displayName: name,
+            photoURL: photoURL
+        }
+        updateUserProfile(profile)
+        .then(result => {
+            
+        })
+        .catch(e => console.log(e))
+    }
+
+    const handleGoogleLogin= ()=>{
+        GoogleLogin();
     }
     return (
         <div>
@@ -55,6 +82,7 @@ const Register = () => {
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Register</button>
+                                <button onClick={handleGoogleLogin} className="btn ">Google</button>
                             </div>
                         </form>
                     </div>

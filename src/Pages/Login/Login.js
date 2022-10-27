@@ -1,13 +1,22 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Context/AuthProvider';
 
 const Login = () => {
+    const {userLogin}= useContext(AuthContext)
     const handleLoginSubmit = (e)=>{
         e.preventDefault();
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password)
+        userLogin(email,password)
+        .then(result => {
+            const user = result.user;
+            console.log(user)
+        })
+        .catch(error => console.log(error))
     }
     return (
         <div>
