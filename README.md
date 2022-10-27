@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# EduCamb
+### Live site [link](https://educamb-f89f2.web.app/) 
+
+## Some Features of this site :
+- Easy To Customize
+- React icons
+- Built With tailwind , daisy UI
+- Responsive
+- Well Documented
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
