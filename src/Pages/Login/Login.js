@@ -1,22 +1,34 @@
 import React from 'react';
+import { useState } from 'react';
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 
 const Login = () => {
+    const [error, setError]= useState('')
     const {userLogin}= useContext(AuthContext)
+    const navigate = useNavigate();
+    const location = useLocation()
+    const from = location.state?.from?.pathname || '/';
+
+
     const handleLoginSubmit = (e)=>{
         e.preventDefault();
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password)
+        // console.log(email, password)
         userLogin(email,password)
         .then(result => {
             const user = result.user;
+            navigate(from, { replace: true})
+            setError('')
             console.log(user)
         })
-        .catch(error => console.log(error))
+        .catch(error => {
+            const errorMassage = error.message;
+            setError(errorMassage)
+        })
     }
     return (
         <div>
@@ -42,6 +54,9 @@ const Login = () => {
                                 <input type="password" name='password' placeholder="password" className="input input-bordered" />
                                 <label className="label">
                                 <p  className="label-text-alt link ">Are you new here? <Link to='/register' className='link-hover text-primary text-2xl'>Register </Link> </p>
+                                </label>
+                                <label className="label">
+                                <p  className="label-text-alt link text-xl text-red-400"> {error}  </p>
                                 </label>
                             </div>
                             <div className="form-control mt-6">

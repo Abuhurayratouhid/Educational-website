@@ -1,11 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
+import CheckOut from "../Others/checkOut/CheckOut";
 import CourseDetails from "../Others/CourseDetails/CourseDetails";
 import Courses from "../Pages/Courses/Courses";
 import Error from "../Pages/Error/Error";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import PrivetRoute from "./PrivetRoute";
 
 const router = createBrowserRouter([
     {
@@ -34,6 +36,11 @@ const router = createBrowserRouter([
                 path: '/details/:id',
                 loader: ({params})=> fetch(`https://educamb-server.vercel.app/courses/${params.id}`),
                 element: <CourseDetails></CourseDetails>
+            },
+            {
+                path: '/checkout/:id',
+                loader: ({params})=> fetch(`https://educamb-server.vercel.app/courses/${params.id}`),
+                element: <PrivetRoute><CheckOut></CheckOut></PrivetRoute>
             }
         ]
     }

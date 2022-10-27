@@ -28,7 +28,7 @@ const CourseDetails = () => {
                 <figure><img className='w-[50%] h-[30%]' src={picture} alt="Shoes" /></figure>
                 <div className='text-center m-5'>
                 <button className="btn  btn-primary ">
-                    <Link to='/login'>
+                    <Link to={`/checkout/${id}`}>
                     <p className='text-sky-500 text-2xl ml-6'><FaRegGem ></FaRegGem></p>
                      
                     purchase</Link>

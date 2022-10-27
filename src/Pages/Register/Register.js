@@ -1,9 +1,11 @@
 import React from 'react';
+import { useState } from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 
 const Register = () => {
+    const [error, setError]= useState('')
     const {createUser , user, GoogleLogin,updateUserProfile } = useContext(AuthContext)
     const handleFormSubmit = (e)=>{
         e.preventDefault();
@@ -16,11 +18,15 @@ const Register = () => {
         createUser(email,password)
         .then(result =>{
             const user = result.user;
+            setError('')
             console.log(user)
             handleUpdateUserProfile(name, photoURL)
             
         })
-        .catch(error => console.log(error))
+        .catch(error => {
+            const errorMassage = error.message;
+            setError(errorMassage)
+        })
 
 
     }
@@ -78,6 +84,9 @@ const Register = () => {
                                 <input type="text" name='password' placeholder="password" className="input input-bordered" required/>
                                 <label className="label">
                                     <p  className="label-text-alt link ">Already have an account? <Link to='/login' className='link-hover text-primary text-2xl'>Login</Link> </p>
+                                </label>
+                                <label className="label">
+                                    <p  className="label-text-alt text-xl text-red-400">{error} </p>
                                 </label>
                             </div>
                             <div className="form-control mt-6">
