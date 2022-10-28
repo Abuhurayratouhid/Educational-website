@@ -7,7 +7,7 @@ import { AuthContext } from '../../Context/AuthProvider';
 
 const Login = () => {
     const [error, setError]= useState('')
-    const {userLogin,GoogleLogin,githubLogin}= useContext(AuthContext)
+    const {userLogin,GoogleLogin,githubLogin,setLoading}= useContext(AuthContext)
     const navigate = useNavigate();
     const location = useLocation()
     const from = location.state?.from?.pathname || '/';
@@ -22,6 +22,7 @@ const Login = () => {
         userLogin(email,password)
         .then(result => {
             const user = result.user;
+            form.reset();
             navigate(from, { replace: true})
             setError('')
             console.log(user)
@@ -29,6 +30,9 @@ const Login = () => {
         .catch(error => {
             const errorMassage = error.message;
             setError(errorMassage)
+        })
+        .finally(() => {
+            setLoading(false);
         })
     }
 

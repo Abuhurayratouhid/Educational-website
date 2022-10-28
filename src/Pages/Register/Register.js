@@ -18,6 +18,7 @@ const Register = () => {
         createUser(email,password)
         .then(result =>{
             const user = result.user;
+            form.reset();
             setError('')
             console.log(user)
             handleUpdateUserProfile(name, photoURL)
@@ -63,13 +64,13 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Full name </span>
                                 </label>
-                                <input type="text" name='name' placeholder="name" className="input input-bordered" />
+                                <input type="text" name='name' placeholder="name" className="input input-bordered" required/>
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Photo URL </span>
                                 </label>
-                                <input type="text" name='PhotoURL' placeholder="Photo URL" className="input input-bordered" />
+                                <input type="text" name='PhotoURL' placeholder="Photo URL" className="input input-bordered" required/>
                             </div>
                             <div className="form-control">
                                 <label className="label">
