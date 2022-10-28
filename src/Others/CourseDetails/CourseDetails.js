@@ -13,7 +13,8 @@ const CourseDetails = () => {
 
     // function of creating pdf 
     const createPdf = ()=>{
-        doc.text('PDF file from EduCamb website', 10, 10);
+        doc.text(' EduCamb provides 6 types of online courses,more 3 courses are coming soon.', 10, 10);
+        
         doc.save("EduCamb.pdf");
     }
     return (
