@@ -9,7 +9,7 @@ const Courses = () => {
     // console.log(allCourses)
     return (
         <div className=' courses-page-container'>
-            <div className=''>
+            <div className='bg-blue-200 mt-10'>
                 {
                     allCourses.map(courses =><SidebarOfCourses
                     key={courses.id}

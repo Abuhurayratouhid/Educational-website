@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
-
+import img from '../../Assets/login.jpeg'
 const Register = () => {
     const [error, setError]= useState('')
     const {createUser , user, GoogleLogin,updateUserProfile } = useContext(AuthContext)
@@ -50,11 +50,9 @@ const Register = () => {
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col ">
-                    <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Please Register !</h1>
-
-                    </div>
+                <h1>Please Register</h1>
+                <div className="hero-content  ">
+                    
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-blue-200">
 
                         {/* from start  */}
@@ -95,6 +93,11 @@ const Register = () => {
                                 
                             </div>
                         </form>
+                    </div>
+                    <div className="text-center lg:text-left">
+                        {/* <h1 className="text-5xl font-bold">Please Register !</h1> */}
+                        <img src={img} alt="" />
+
                     </div>
                 </div>
             </div>

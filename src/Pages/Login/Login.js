@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
+import loginImage from '../../Assets/login.jpeg';
 
 const Login = () => {
     const [error, setError]= useState('')
@@ -61,9 +62,10 @@ const Login = () => {
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col ">
-                    <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Please Login !</h1>
+                <div className=" flex ">
+                    <div className=" ">
+                     
+                        <img src={loginImage} alt="" />
                         
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-blue-200">

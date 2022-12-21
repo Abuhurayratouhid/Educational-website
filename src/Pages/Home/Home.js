@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Features from '../../Components/Features';
 
 const Home = () => {
     return (
@@ -15,10 +16,13 @@ const Home = () => {
                 </div>
             </div>
             <div>
+                {/* <Features></Features> */}
+            </div>
+            <div>
                 <div className="hero min-h-screen bg-slate-300">
                     <div className="hero-content flex-col lg:flex-row">
-                        <img src="https://www.mooc.org/hubfs/is-coding-right-for-me.jpg" className="max-w-sm rounded-lg shadow-2xl" />
-                        <img src="https://hot-town-images.s3.us-east-1.amazonaws.com/kotv/production/2016/February/17/girls-who-code-class-teaches-girls-computer-programming-selfconfidence.1455772709000-0.jpeg" className="max-w-sm rounded-lg shadow-2xl" />
+                        <img alt='' src="https://www.mooc.org/hubfs/is-coding-right-for-me.jpg" className="max-w-sm rounded-lg shadow-2xl" />
+                        <img alt='' src="https://hot-town-images.s3.us-east-1.amazonaws.com/kotv/production/2016/February/17/girls-who-code-class-teaches-girls-computer-programming-selfconfidence.1455772709000-0.jpeg" className="max-w-sm rounded-lg shadow-2xl" />
                         <div>
                             <h1 className="text-5xl font-bold">Be part of them!</h1>
                             <p className="py-6">Never stop exploring the new things . </p>
