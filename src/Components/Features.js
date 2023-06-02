@@ -3,6 +3,8 @@ import coaching from '../Assets/coaching.png';
 import selfDevelopment from '../Assets/selfDevelopment.jfif';
 import consultation from '../Assets/Consultation.png';
 import livePrograms from '../Assets/livePrograms.jpg';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Features = () => {
     const features = [
@@ -34,6 +36,18 @@ const Features = () => {
                 <div>div-2</div>
                 <div>div-3</div>
             </div>
+            <Carousel>
+
+                <div className='h-60 w-[100%]'>
+                    <img src={coaching} alt="" />
+                </div>
+                <div className='h-60 w-[100%]'>
+                    <img src={selfDevelopment} alt="" />
+                </div>
+                <div className='h-60 w-[100%]'>
+                    <img  src={consultation} alt="" />
+                </div>
+            </Carousel>
         </div>
     );
 };

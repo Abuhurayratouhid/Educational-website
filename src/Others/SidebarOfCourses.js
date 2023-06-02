@@ -7,7 +7,7 @@ const SidebarOfCourses = ({courses}) => {
         <div className='md:px-10'>
             <Link className='mt-10' to={`/details/${id}`}>
 
-            <h1  className='mt-8 underline decoration-4   hover:bg-blue-200   text-2xl font-bold '>{name}</h1>
+            <h1  className='mt-8 text-2xl font-bold text-primary'>{name}</h1>
             </Link>
              
         </div>

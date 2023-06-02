@@ -16,7 +16,7 @@ const Header = () => {
     return (
         <div>
 
-            <div className="h-28 navbar bg-blue-200  md:flex justify-between ">
+            <div className="h-28 navbar bg-black text-white  md:flex justify-between ">
                 <div>
                     <div className='text-white'>
 
@@ -38,8 +38,8 @@ const Header = () => {
 
                     <Link className='ml-1 hidden md:block md:ml-20' to='/'>Home</Link>
                     <Link className='ml-3 md:ml-4' to='/courses'>Courses </Link>
-                    <Link className='ml-3 md:ml-4' to='/blog'>Blog  </Link>
-                    <Link className='ml-1 hidden md:block md:ml-4' to='/register'>Register</Link>
+                    <Link className='ml-3 hidden md:block md:ml-4' to='/blog'>Blog  </Link>
+                    <Link className='ml-3  md:ml-4' to='/register'>Register</Link>
                 </div>
                 <div className='flex items-center'>
                     {/* dark and light mood toggle */}

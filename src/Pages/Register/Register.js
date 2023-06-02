@@ -49,11 +49,11 @@ const Register = () => {
     }
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
-                <h1>Please Register</h1>
+            <div className="hero min-h-screen bg-base-200" style={{ backgroundImage: `url("https://www.1stformationsblog.co.uk/wp-content/uploads/2022/09/Shutterstock_1079243414.jpg")` }}>
+                <h1 className='text-white'>Please Register</h1>
                 <div className="hero-content  ">
                     
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-blue-200">
+                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-black text-white">
 
                         {/* from start  */}
 
@@ -96,7 +96,7 @@ const Register = () => {
                     </div>
                     <div className="text-center lg:text-left">
                         {/* <h1 className="text-5xl font-bold">Please Register !</h1> */}
-                        <img src={img} alt="" />
+                        {/* <img src={img} alt="" /> */}
 
                     </div>
                 </div>

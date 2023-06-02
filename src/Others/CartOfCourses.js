@@ -6,7 +6,7 @@ const CartOfCourses = ({courses}) => {
     return (
         <div className='md:m-5'>
             <Link to={`/details/${id}`}>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card m-5 lg:w-96 bg-gray-300 shadow-xl">
                 <figure className="px-10 pt-10">
                     <img 
                     src={picture} 

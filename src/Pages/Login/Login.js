@@ -61,14 +61,16 @@ const Login = () => {
     
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-base-200" style={{ backgroundImage: `url("https://img.freepik.com/free-vector/login-concept-illustration_114360-739.jpg?w=2000")` }}>
                 <div className=" flex ">
-                    <div className=" ">
+                    {/* <div className=" ">
                      
                         <img src={loginImage} alt="" />
                         
-                    </div>
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-blue-200">
+                        
+                    </div> */}
+                    
+                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-black text-white">
                         {/* form start  */}
                         <form onSubmit={handleLoginSubmit} className="card-body">
                             <div className="form-control">
